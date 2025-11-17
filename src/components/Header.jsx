@@ -17,14 +17,16 @@ export default function Header({onNavigate}) {
                 <a className="nav__link" href="#" onClick={(e) => go(e, 'home')}>Головна</a>
                 <a className="nav__link" href="#" onClick={(e) => go(e, 'about')}>Про нас</a>
                 <a className="nav__link" href="#" onClick={(e) => e.preventDefault()}>Контакти</a>
-                <button
-                    type="button"
-                    className="nav__link nav__link--cta"
-                    onClick={toggleTheme}
-                    title="Перемикач теми"
-                >
-                    {theme === 'light' ? 'Темна' : 'Світла'}
-                </button>
+                <div className="flex ml-auto gap-0.5">
+                    <button
+                        type="button"
+                        className="nav__link nav__link--cta"
+                        onClick={toggleTheme}
+                        title="Перемикач теми"
+                    >
+                        {theme === 'light' ? 'Темна' : 'Світла'}
+                    </button>
+                </div>
             </nav>
         </header>
     )
