@@ -16,7 +16,7 @@ function App() {
     <ThemeProvider initial="light">
       <div className="layout">
         <Header onNavigate={setPage} /> 
-        <Sidenav />
+        <Sidenav onNavigate={setPage} />
         <main className="main">
           {page === 'home' && <Home />}
           {page === 'about' && <About />}

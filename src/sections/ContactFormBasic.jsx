@@ -50,7 +50,10 @@ export default function ContactFormBasic() {
                 <textarea id="msg" name="message" minLength={10} className="contact-form__textarea" placeholder="Ваше повідомлення"></textarea>
             </div>
 
-            <button className="contact-form__button" disabled={status==='loading'}>Надіслати (FormData)</button>
+            <button type="submit" className="contact-form__button" disabled={status==='loading'}>
+            Надіслати (FormData)
+            </button>
+
 
             {status==='loading' && <small className="text-blue-400">Надсилання…</small>}
             {status==='error'   && <small className="text-red-600">Помилка: {error}</small>}
